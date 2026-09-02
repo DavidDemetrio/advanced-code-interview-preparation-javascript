@@ -208,9 +208,112 @@ function MultiArrTraversal01() {
 		}
 	} */
 
-	console.log("MATRIX", matrixExOne);
+	// console.log("MATRIX", matrixExOne);
+
+	/**
+	 * ==========================================================
+	 * MORE EXCERCISE MULTITRANSVERSAL ARRAYS 27 Aug 2026
+	 * ==========================================================
+	*/
+	// Ex. 1 -  Basic Transversal
+	const matrix01Sept = [
+		[1, 2, 3],
+		[4, 5, 6],
+		[7, 8, 9]
+	];
+	// Individuality, print each element
+	console.log("Ex. One");
+	matrix01Sept.forEach(row => row.forEach(col => console.log(col)))
+	console.log("---------------------------------");
 
 
+	// Ex. 2 Contar elementos pares
+	console.log("Ex. Two");
+	/**
+	 * 1. Creas variable contador-par
+	 * 2. Recorrer cada elemento
+	 * 	si % = 0 es par
+	 * 		sumas 1 a contador-par
+	 * 	no -> continue
+	*/
+	let elementos_pares = 0;
+	for (let row = 0; row < matrix01Sept.length; row++) {
+		for (let col = 0; col < matrix01Sept[row].length; col++) {
+			if (matrix01Sept[row][col] % 2 !== 0) continue;
+			elementos_pares++;
+		}
+	}
+	console.log("Elementos pares:", elementos_pares);
+	console.log("---------------------------------");
+
+
+	// Ex. 3
+	// Sumar todos los elementos
+	const matrix2_sept = [
+		[2, 4, 6],
+		[1, 3, 5],
+		[7, 8, 9]
+	];
+	/**
+	 * 1. 
+	*/
+	console.log("Ex. Three");
+	let sumTotal: number = 0;
+
+	for (let i = 0; i < matrix2_sept.length; i++) {
+		for (let j = 0; j < matrix2_sept[i].length; j++) {
+			sumTotal += matrix2_sept[i][j];
+		}
+	}
+	console.log("Sum. Total:", sumTotal);
+
+	console.log("---------------------------------");
+
+	/**
+	 * Nievel 2 Transversal + continue
+	*/
+	// Ej. 4 - Ignorar numeros pares
+	// Recorre la matriz pero no imprimas los números pares
+	console.log("Ex. Four");
+	for (let i = 0; i < matrix01Sept.length; i++) {
+		for (let j = 0; j < matrix01Sept[i].length; j++) {
+			const element = matrix01Sept[i][j];
+
+			if (element % 2 === 0) continue;
+			console.log(element);
+		}
+	}
+	console.log("---------------------------------");
+
+	// Ej. 5 Ignorar una fila (fila 2)
+	// 1. Recorrer 
+	console.log("Ex. Five");
+	for (let i = 0; i < matrix01Sept.length; i++) {
+		if (i === 1) continue;
+
+		const row = matrix01Sept[i];
+
+		for (let j = 0; j < row.length; j++) {
+			console.log(row[j]);
+		}
+	}
+	console.log("---------------------------------");
+
+
+	/**
+	 * Nivel 3 Buscar un elemento
+	*/
+	// EJERCICIO 6
+	const matrix03_sept = [
+		[10, 20, 30],
+		[40, 50, 60],
+		[70, 80, 90]
+	];
+	// Find 50
+	// if it was founded
+		// save its index row
+		// save its index col
+		// stop recorrer matriz
 	return (
 		<div className="p-4">
 			<div className="flex gap-4">
